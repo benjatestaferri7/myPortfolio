@@ -5,11 +5,17 @@ body{
     padding: 0px;
     background-color: #161616;
 }
+html{
+    scroll-behavior: smooth;
+}
 ul{
     list-style: none;
 }
 a{
     text-decoration: none;
+}
+.toggle{
+    display: none;
 }
 #main{
     width: 100%;
@@ -58,7 +64,7 @@ nav{
     font-family: Poppins;
 }
 .menu li a:hover,
-.active{
+.menu li a.active{
     background-color: #292929;
     color: #ffffff !important;
     font-weight: 700;
@@ -443,19 +449,19 @@ nav{
      letter-spacing: 2px;
      font-weight: 400;
  }
- .fEmail, 
- .fName{
+ .fName, 
+ .fEmail{
      display: flex;
      flex-direction: column;
      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
  }
- .fMail font, 
- .fName font{
+ .fName font, 
+ .fEmail font{
      color: #bfbfbf;
      font-size: 22px;
  }
- .fMail input, 
- .fName input{
+ .fName input, 
+ .fEmail input{
      height: 30px;
      width: 250px;
      border: none;
@@ -465,13 +471,13 @@ nav{
      color: #ffffff;
      margin: 10px 0px;
  }
- .fMail input::placeholder, 
- .fName input::placeholder{
+ .fName input::placeholder, 
+ .fEmail input::placeholder{
     opacity: 0.5;
     letter-spacing: 1px;
  }
- .fEmail input:focus,
- .fName input:focus{
+ .fName input:focus,
+ .fEmail input:focus{
      border-bottom: 1px solid #0072C6;
      transition: all ease 0.5s;
  }
@@ -513,4 +519,98 @@ nav{
      font-size: 14px;
      text-transform: uppercase;
      letter-spacing: 2px;
+ }
+ @media(max-width:1190px){
+     #main{
+         background-size: 1150px;
+     }
+     .name{
+         left: 10%;
+         top: 50%;
+         transform: translate(-10%, -50%);
+     }
+     .aboutModel img{
+         height: 400px;
+     }
+     #services{
+         height: auto;
+     }
+     .sbContainer{
+         flex-wrap: wrap;
+     }
+     .sBox{
+         flex-grow: 1;
+     }
+     .sbText{
+         text-align: center;
+     }
+     #contactForm form{
+         width: 95% !important;
+     }
+ }
+ @media(max-width:970px){
+     #main{
+         background-image: none !important;
+     }
+     .name{
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%);
+     }
+     .aboutModel{
+         display: none;
+     }
+     #about{
+         justify-content: center;
+         padding-top: 0px;
+     }
+     .aboutText{
+         width: 90%;
+     }
+     .aboutText h1{
+         font-size: 4rem;
+     }
+     .pbContainer{
+         width: 100%;
+     }
+ }
+ @media(max-width:900px){
+     .toggle{
+         display: block;
+     }
+     .toggle::before{
+         content: '\f0c9';
+         font-family: fontAwesome;
+         line-height: 0px;
+         margin-left: 25px;
+     }
+     .toggle.active::before{
+         content: '\f00d';
+     }
+     nav{
+         padding: 10px 30px;
+     }
+     nav ul{
+         position: absolute;
+         width: 100%;
+         height: auto;
+         box-sizing: border-box;
+         background-color: #0f0f0f;
+         top: 50px;
+         left: 0px;
+         transition: 0.5s;
+         overflow: hidden;
+         border: 3px solid #1f1f1f;
+         display: block !important;
+     }
+     nav ul li a{
+         border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+         width: 100%;
+         height: 50px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin: 0px !important;
+         padding: 0px !important;
+     }
  }

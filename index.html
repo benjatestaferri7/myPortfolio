@@ -19,13 +19,15 @@
     <nav>
         <!--logo-->
         <a href="#" class="logo">PORTFOLIO</a>
+        <!--barIcon-->
+        <div class="toggle"></div>
         <!--menu-->
         <ul class="menu">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#main" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contactForm">Contact</a></li>
         </ul>
         <!--language-->
         <a href="#" class="lang">En-Esp</a>
@@ -201,7 +203,7 @@
         <!--heading-->
         <h1 class="cbHeading">If You Have Any Project In Your Mind ?</h1>
         <!--btn-->
-        <button>Contact Me</button>
+        <a href="#contactForm"> Contact Me</a>
     </section>
     <!--contactForm-->
     <section id="contactForm">
@@ -237,6 +239,17 @@
             </div>
         </form>
     </section>
+
+    <!--Jquery-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!--forChangeBarIconTox-->
+    <script type="text/javascript">
+        $('document').ready(function(){
+            $('.toggle').click(function(){
+                $('.toggle').toggleClass('active')
+            })
+        })
+    </script>
 
 </body>
 </html>
