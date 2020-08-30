@@ -1,17 +1,24 @@
 <?php
-    $name = $_POST["name"];
-    $mail = $_POST["email"];
-    $message = $_POST["message"];
+$sender = $_POST['email'];
+$addressee = 'benjamintestaferrig@gmail.com';
+$asunto = 'msg'; 
+if (!$_POST){
+}
+
+else{
+	 
+    $body = "Full Name: " . $_POST["name"] . "\r\n"; 
+    $body .= "Email: " . $_POST["email"] . "\r\n";
+	$body .= "msg: " . $_POST["msg"] . "\r\n";
+
+    $headers  = "MIME-Version: 1.0\n";
+    $headers .= "Content-type: text/plain; charset=utf-8\n";
+    $headers .= "X-Priority: 3\n";
+    $headers .= "X-MSMail-Priority: Normal\n";
+    $headers .= "X-Mailer: php\n";
+    $headers .= "From: \"".$_POST['name']."\" <".$sender.">\n";
+
+    mail($addressee, $asunto, $body, $headers);
     
-    $to = "benjamintestaferrig@gmial.com";
-    $asunto = "New contact message from $name";
-
-    $message = "
-        Sender's name: ".$name."
-        Email: ".$email."
-        Message: ".$message."
-    ";
-
-    mail($to, $asunto, utf8_decode($message));
-
-    header("location: index.html");
+    header("location: index.php");
+}

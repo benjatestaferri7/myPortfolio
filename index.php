@@ -9,6 +9,8 @@
     <link rel="shortcut icon" href="img/icon.png">
     <!--css-->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!--Sweetalert2-->
+    <link  href="css/sweetalert2.all.min.js">
     <!--using FontAwesome---------------->
 <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </head>
@@ -218,14 +220,14 @@
                 <!--FormName-->
                 <font>Name</font>
                 <!--input-->
-                <input type="text" placeholder="Full Name" name="name">
+                <input type="text" name="name" placeholder="Full Name" >
                 </div>
                 <!--FormEmail-->
                 <div class="fEmail">
                     <!--name-->
                     <font>Email</font>
                     <!--input-->
-                    <input type="email" placeholder="Example@gmail.com" name="email">
+                    <input type="email" name="email" placeholder="Example@gmail.com" >
                     </div>
             </div>
             <!--right-->
@@ -233,22 +235,22 @@
                 <!--message-->
                 <div class="message">
                     <font>Message</font>
-                    <textarea name="message" rows="5" cols="20" placeholder="Write Message..."></textarea>
+                    <textarea name="msg" rows="5" cols="20" placeholder="Write Message..."></textarea>
                 </div>
                 <!--sumbit-->
-                <button type="submit">submit</button>
+                <button type="submit" name="submit">submit</button>
             </div>
         </form>
     </section>
 
     <!--Jquery-->
-    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
     <!--forChangeBarIconTox-->
     <script type="text/javascript">
-        $('document').ready(function(){
+        $(document).ready(function(){
             $('.toggle').click(function(){
-                $('.toggle').toggleClass('active')
-                $('nav ul').toggleClass('activeMenu')
+            $('.toggle').toggleClass('active')
+            $('nav ul').toggleClass('activeMenu')
             })
         })
     </script>
