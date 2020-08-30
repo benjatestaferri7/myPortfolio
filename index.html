@@ -208,7 +208,7 @@
     </section>
     <!--contactForm-->
     <section id="contactForm">
-        <form>
+        <form action="contact.php" method="post">
             <!--left-->
             <div class="contactLeft">
                 <!--heading-->
@@ -218,14 +218,14 @@
                 <!--FormName-->
                 <font>Name</font>
                 <!--input-->
-                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Full Name" name="name">
                 </div>
                 <!--FormEmail-->
                 <div class="fEmail">
                     <!--name-->
                     <font>Email</font>
                     <!--input-->
-                    <input type="email" placeholder="Example@gmail.com">
+                    <input type="email" placeholder="Example@gmail.com" name="email">
                     </div>
             </div>
             <!--right-->
@@ -236,7 +236,7 @@
                     <textarea name="message" rows="5" cols="20" placeholder="Write Message..."></textarea>
                 </div>
                 <!--sumbit-->
-                <button>submit</button>
+                <button type="submit">submit</button>
             </div>
         </form>
     </section>
