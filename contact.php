@@ -12,6 +12,6 @@
         Message: ".$message."
     ";
 
-    mail($para, $asunto, utf8_decode($message));
+    mail($to, $asunto, utf8_decode($message));
 
     header("location: index.html");
